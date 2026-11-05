@@ -47,8 +47,8 @@ class MainActivity : AppCompatActivity() {
             .setTitle("Elige un videojuego")
             .setTitle("Introduce un número para elegir el videojuego")
             .setView(entrada) //Todos los elementos se llaman "View"
-            .setPositiveButton("Buscar", null)
-            .setNegativeButton("Cancelar") { dialog, whichButton -> //diaglog (p0) y whichButton(p1) son parametros vacios
+            .setNegativeButton("Cancelar", null)
+            .setPositiveButton("Buscar") { dialog, whichButton -> //diaglog (p0) y whichButton(p1) son parametros vacios
                 val num = entrada.text.toString().toInt()
 
                 val intent = Intent(this, VideojuegoActivity::class.java)
