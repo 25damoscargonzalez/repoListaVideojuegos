@@ -7,7 +7,7 @@ import com.example.listavideojuegos.modelo.Empresa
 import java.time.LocalDate
 
 interface RepositorioConsolas {
-    @RequiresApi(Build.VERSION_CODES.O)
+
     fun poblar() {
         nuevaConsola(
             p = Consola("PlayStation5", 450.90f, LocalDate.of(2020, 11, 12), Empresa.Sony, "")

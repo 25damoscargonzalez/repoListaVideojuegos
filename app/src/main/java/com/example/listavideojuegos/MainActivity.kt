@@ -15,11 +15,11 @@ import com.example.listavideojuegos.datos.ListaConsolas
 class MainActivity : AppCompatActivity() {
 
     companion object { //Creamos un bloque y dentro definimos lo que queremos que sea static
-        val listaVideojuegos = ListaConsolas()
+        val listaConsolas = ListaConsolas()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        listaVideojuegos.poblar()
+        listaConsolas.poblar()
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
