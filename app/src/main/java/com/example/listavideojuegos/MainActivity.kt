@@ -11,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.listavideojuegos.datos.ListaVideojuegos
-import com.example.listavideojuegos.modelo.VideojuegoActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -33,8 +32,6 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.bIrVideojuego).setOnClickListener {
             dialogoElegir()
         }
-
-        //PRUEBAAAAAAA
 
     }
 

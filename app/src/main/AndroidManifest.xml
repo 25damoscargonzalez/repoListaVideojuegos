@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".modelo.VideojuegoActivity"
+            android:name=".VideojuegoActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>
