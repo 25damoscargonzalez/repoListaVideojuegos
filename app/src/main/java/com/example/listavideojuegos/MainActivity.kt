@@ -32,8 +32,6 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.bIrVideojuego).setOnClickListener {
             dialogoElegir()
-            //HOla
-            //HoLA
         }
 
     }
