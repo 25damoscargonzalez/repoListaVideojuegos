@@ -1,24 +1,28 @@
 package com.example.listavideojuegos.datos
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import com.example.listavideojuegos.modelo.Consola
-import com.example.listavideojuegos.modelo.Consolas
+import com.example.listavideojuegos.modelo.Empresa
+import java.time.LocalDate
 
 interface RepositorioConsolas {
+    @RequiresApi(Build.VERSION_CODES.O)
     fun poblar() {
         nuevaConsola(
-            p = Consola("PlayStation5", "Estudiante 2ºDAM", Consolas.PS5)
+            p = Consola("PlayStation5", 450.90f, LocalDate.of(2020, 11, 12), Empresa.Sony, "")
         )
         nuevaConsola(
-            p = Consola("PlayStation4", "Estudiante 2ºDAM", Consolas.PS4)
+            p = Consola("PlayStation4", 450.90f, LocalDate.of(2014, 3, 20), Empresa.Sony, "")
         )
         nuevaConsola(
-            p = Consola("Xbox360", "Estudiante 2ºDAM", Consolas.XBOX360)
+            p = Consola("Xbox360", 450.90f, LocalDate.of(2012, 9, 5), Empresa.Microsoft, "")
         )
         nuevaConsola(
-            p = Consola("PlayStation2", "Estudiante 2ºDAM", Consolas.PS2)
+            p = Consola("PlayStation2", 450.90f, LocalDate.of(2000, 11, 20), Empresa.Sony, "")
         )
         nuevaConsola(
-            p = Consola("Gameboy", "Estudiante 2ºDAM", Consolas.GAMEBOY)
+            p = Consola("Gameboy", 450.90f, LocalDate.of(1988, 1, 30), Empresa.Nintendo, "")
         )
     }
 
