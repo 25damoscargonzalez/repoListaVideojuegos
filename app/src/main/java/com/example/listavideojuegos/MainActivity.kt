@@ -10,12 +10,12 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.listavideojuegos.datos.ListaVideojuegos
+import com.example.listavideojuegos.datos.ListaConsolas
 
 class MainActivity : AppCompatActivity() {
 
     companion object { //Creamos un bloque y dentro definimos lo que queremos que sea static
-        val listaVideojuegos = ListaVideojuegos()
+        val listaVideojuegos = ListaConsolas()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

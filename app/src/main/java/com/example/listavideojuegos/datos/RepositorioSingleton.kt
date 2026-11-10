@@ -6,10 +6,10 @@ class RepositorioSingleton {
     }
 
     //Inicializamos una Lista de personajes y luego la poblamos
-    val listaVideojuegos: RepositorioVideojuegos = ListaVideojuegos();
+    val listaConsolas: RepositorioConsolas = ListaConsolas();
 
     //Cualquier parte del constructor que no inicializa variables
     init {
-        listaVideojuegos.poblar()
+        listaConsolas.poblar()
     }
 }
