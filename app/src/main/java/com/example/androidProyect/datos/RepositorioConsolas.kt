@@ -1,9 +1,7 @@
-package com.example.listavideojuegos.datos
+package com.example.androidProyect.datos
 
-import android.os.Build
-import androidx.annotation.RequiresApi
-import com.example.listavideojuegos.modelo.Consola
-import com.example.listavideojuegos.modelo.Empresa
+import com.example.androidProyect.modelo.Consola
+import com.example.androidProyect.modelo.Empresa
 import java.time.LocalDate
 
 interface RepositorioConsolas {

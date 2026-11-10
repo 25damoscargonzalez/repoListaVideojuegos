@@ -1,4 +1,4 @@
-package com.example.listavideojuegos
+package com.example.androidProyect
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package com.example.listavideojuegos
+package com.example.androidProyect
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

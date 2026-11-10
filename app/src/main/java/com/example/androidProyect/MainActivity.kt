@@ -1,4 +1,4 @@
-package com.example.listavideojuegos
+package com.example.androidProyect
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,10 +10,11 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.listavideojuegos.datos.ListaConsolas
+import com.example.androidProyect.datos.ListaConsolas
 
 class MainActivity : AppCompatActivity() {
 
+    // 5- LISTA ELEMENTOS (CONSOLAS)
     companion object { //Creamos un bloque y dentro definimos lo que queremos que sea static
         val listaConsolas = ListaConsolas()
     }
@@ -30,7 +31,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.bCalculadora).setOnClickListener {
-
+            val intent = Intent(this, CalculadoraActivity::class.java)
+            startActivity(intent)
         }
 
         findViewById<Button>(R.id.bConversor).setOnClickListener {
@@ -55,17 +57,17 @@ class MainActivity : AppCompatActivity() {
         val entrada = EditText(this)
 
         entrada.inputType = InputType.TYPE_CLASS_NUMBER
-        entrada.hint = "Número de videojuego"
+        entrada.hint = "Número de consola"
 
         AlertDialog.Builder(this) //AlertDialog tiene una subclase que te construye un dialogo de alerta
-            .setTitle("Elige un videojuego")
-            .setTitle("Introduce un número para elegir el videojuego")
+            .setTitle("Elige un consola")
+            .setTitle("Introduce un número para elegir la consola")
             .setView(entrada) //Todos los elementos se llaman "View"
             .setNegativeButton("Cancelar", null)
             .setPositiveButton("Buscar") { dialog, whichButton -> //diaglog (p0) y whichButton(p1) son parametros vacios
                 val num = entrada.text.toString().toInt()
 
-                val intent = Intent(this, VideojuegoActivity::class.java)
+                val intent = Intent(this, ConsolaActivity::class.java)
                 intent.putExtra("numero", num)
                 startActivity(intent)
             }

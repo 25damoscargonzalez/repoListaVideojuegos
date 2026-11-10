@@ -22,7 +22,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".VideojuegoActivity"
+            android:name=".ConsolaActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".CalculadoraActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>

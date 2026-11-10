@@ -1,4 +1,4 @@
-package com.example.listavideojuegos.datos
+package com.example.androidProyect.datos
 
 class RepositorioSingleton {
     companion object {

@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    namespace = "com.example.listavideojuegos"
+    namespace = "com.example.androidProyect"
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId = "com.example.listavideojuegos"
+        applicationId = "com.example.androidProyect"
         minSdk = 24
         targetSdk = 37
         versionCode = 1

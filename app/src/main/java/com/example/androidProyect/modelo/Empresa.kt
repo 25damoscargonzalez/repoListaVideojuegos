@@ -1,4 +1,4 @@
-package com.example.listavideojuegos.modelo
+package com.example.androidProyect.modelo
 
 enum class Empresa {
     Sony,

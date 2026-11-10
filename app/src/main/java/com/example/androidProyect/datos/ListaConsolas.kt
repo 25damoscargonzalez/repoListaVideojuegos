@@ -1,6 +1,6 @@
-package com.example.listavideojuegos.datos
+package com.example.androidProyect.datos
 
-import com.example.listavideojuegos.modelo.Consola
+import com.example.androidProyect.modelo.Consola
 
 class ListaConsolas : RepositorioConsolas{
     private val lista: MutableList<Consola> = mutableListOf() //Mas o menos es lo mismo que el ArrayList
