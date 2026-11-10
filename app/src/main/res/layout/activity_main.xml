@@ -15,45 +15,45 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/bLista" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/bLista"
         android:layout_width="411dp"
         android:layout_height="wrap_content"
         android:text="Lista"
         app:layout_constraintBottom_toTopOf="@+id/bIrVideojuego"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/bJuegos" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/bCalculadora"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Calculadora"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintBottom_toTopOf="@+id/bConversor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/bConversor"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Conversor"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintBottom_toTopOf="@+id/bJuegos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/bCalculadora" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/bJuegos"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Juegos"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/bLista"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/bConversor" />
 </androidx.constraintlayout.widget.ConstraintLayout>

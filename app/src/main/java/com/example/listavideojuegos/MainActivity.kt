@@ -29,6 +29,22 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        findViewById<Button>(R.id.bCalculadora).setOnClickListener {
+
+        }
+
+        findViewById<Button>(R.id.bConversor).setOnClickListener {
+
+        }
+
+        findViewById<Button>(R.id.bJuegos).setOnClickListener {
+
+        }
+
+        findViewById<Button>(R.id.bLista).setOnClickListener {
+
+        }
+
         findViewById<Button>(R.id.bIrVideojuego).setOnClickListener {
             dialogoElegir()
         }
@@ -50,6 +66,7 @@ class MainActivity : AppCompatActivity() {
                 val num = entrada.text.toString().toInt()
 
                 val intent = Intent(this, VideojuegoActivity::class.java)
+                intent.putExtra("numero", num)
                 startActivity(intent)
             }
             .show()
