@@ -8,10 +8,10 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/bIrVideojuego"
+        android:id="@+id/bIrConsola"
         android:layout_width="411dp"
         android:layout_height="wrap_content"
-        android:text="Ir al videojuego"
+        android:text="Ir a la consola"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +22,7 @@
         android:layout_width="411dp"
         android:layout_height="wrap_content"
         android:text="Lista"
-        app:layout_constraintBottom_toTopOf="@+id/bIrVideojuego"
+        app:layout_constraintBottom_toTopOf="@+id/bIrConsola"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bJuegos" />

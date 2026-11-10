@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        findViewById<Button>(R.id.bIrVideojuego).setOnClickListener {
+        findViewById<Button>(R.id.bIrConsola).setOnClickListener {
             dialogoElegir()
         }
 
