@@ -9,7 +9,7 @@
 
     <Button
         android:id="@+id/bIrConsola"
-        android:layout_width="411dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Ir a la consola"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -19,7 +19,7 @@
 
     <Button
         android:id="@+id/bLista"
-        android:layout_width="411dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Lista"
         app:layout_constraintBottom_toTopOf="@+id/bIrConsola"
