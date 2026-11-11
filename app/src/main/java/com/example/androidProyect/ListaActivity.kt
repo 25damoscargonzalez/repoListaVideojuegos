@@ -25,6 +25,5 @@ class ListaActivity : AppCompatActivity() {
         recycler.adapter = adaptador
         val layout = LinearLayoutManager(this)
         recycler.layoutManager = layout
-
     }
 }
