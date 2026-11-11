@@ -10,8 +10,10 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.androidProyect.Juegos.JuegoActivity
 import com.example.androidProyect.datos.ListaConsolas
 import com.example.androidProyect.R
+import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
 
@@ -41,11 +43,13 @@ class MainActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.bJuegos).setOnClickListener {
-
+            val intent = Intent(this, JuegoActivity::class.java)
+            startActivity(intent)
         }
 
         findViewById<Button>(R.id.bLista).setOnClickListener {
-
+            val intent = Intent(this, ListaActivity::class.java)
+            startActivity(intent)
         }
 
         findViewById<Button>(R.id.bIrConsola).setOnClickListener {
