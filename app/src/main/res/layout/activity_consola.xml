@@ -21,7 +21,7 @@
     <ImageView
         android:id="@+id/iconoGrande"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200px"
         tools:srcCompat="@tools:sample/avatars" />
 
     <LinearLayout
