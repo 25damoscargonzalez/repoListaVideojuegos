@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.androidProyect.datos.ListaConsolas
+import com.example.androidProyect.R
 
 class MainActivity : AppCompatActivity() {
 
