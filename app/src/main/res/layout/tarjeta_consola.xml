@@ -7,7 +7,7 @@
     android:layout_height="match_parent" >
 
     <ImageView
-        android:id="@+id/imagen_pequeño"
+        android:id="@+id/imagen_pequenno"
         android:layout_width="212dp"
         android:layout_height="115dp"
         android:layout_weight="1"
