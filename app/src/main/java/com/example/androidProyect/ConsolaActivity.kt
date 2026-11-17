@@ -1,20 +1,31 @@
 package com.example.androidProyect
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
+import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.androidProyect.datos.RepositorioSingleton
 
 class ConsolaActivity : AppCompatActivity() {
+    companion object {
+        const val NUMERO_CONS = "numero consola"
+    }
+
+    var idConsola: Int = -1
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val idConsola = intent.extras?.getInt("numero")?:0
+        idConsola = intent.extras?.getInt(NUMERO_CONS) ?:0
         enableEdgeToEdge()
         setContentView(R.layout.activity_consola)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -22,6 +33,9 @@ class ConsolaActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val barra = findViewById<Toolbar>(R.id.toolbar_consola)
+        setSupportActionBar(barra)
 
         val lista = RepositorioSingleton.instance.listaConsolas
         val consola = lista.buscar(idConsola)
@@ -45,4 +59,26 @@ class ConsolaActivity : AppCompatActivity() {
         ratingBar.rating = consola.opinion.toFloat()
 
     }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_vista_consola, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        Log.d("MENU", "PULSADO EL $item")
+
+        val idBoton = item.itemId
+        return when (idBoton) {
+            R.id.boton_menu_editar -> {
+                Log.d("MENU", "Toca editar")
+                val intent = Intent(this, EditarConsola::class.java)
+                intent.putExtra(NUMERO_CONS, idConsola) //el personaje que tiene que editar
+                startActivity(intent)
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
 }
