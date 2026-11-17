@@ -49,7 +49,7 @@ class AdaptadorLista(val contexto: Context) : RecyclerView.Adapter<AdaptadorList
         holder.itemView.findViewById<TextView>(R.id.tarjeta_nombre).text = consola.nombre
 
         holder.itemView.findViewById<TextView>(R.id.tarjeta_fecha)
-            .text = consola.FechaLanzamiento.toString()
+            .text = consola.fechaLanzamiento.toString()
 
         holder.itemView.findViewById<TextView>(R.id.tarjeta_descripcion)
             .text = consola.descripcion

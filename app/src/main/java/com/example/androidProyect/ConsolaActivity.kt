@@ -50,9 +50,9 @@ class ConsolaActivity : AppCompatActivity() {
         val textoEmpresa = findViewById<TextView>(R.id.tarjetaEmpresa)
         val textoDescripcion = findViewById<TextView>(R.id.tarjetaDescripcion)
 
-        textAlmacenamiento.text =  consola.Almacenamiento.toString()
-        textoFecha.text = consola.FechaLanzamiento.toString()
-        textoEmpresa.text = consola.Empresa.toString()
+        textAlmacenamiento.text =  consola.almacenamiento.toString()
+        textoFecha.text = consola.fechaLanzamiento.toString()
+        textoEmpresa.text = consola.empresa.toString()
         textoDescripcion.text = consola.descripcion
 
         val ratingBar = findViewById<RatingBar>(R.id.tarjetaOpinion)
@@ -72,7 +72,7 @@ class ConsolaActivity : AppCompatActivity() {
         return when (idBoton) {
             R.id.boton_menu_editar -> {
                 Log.d("MENU", "Toca editar")
-                val intent = Intent(this, EditarConsola::class.java)
+                val intent = Intent(this, EditarActivity::class.java)
                 intent.putExtra(NUMERO_CONS, idConsola) //el personaje que tiene que editar
                 startActivity(intent)
                 true
