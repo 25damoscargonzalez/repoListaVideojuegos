@@ -24,18 +24,71 @@ class JuegoActivity : AppCompatActivity() {
         val botonTijera = findViewById<Button>(R.id.bTijera);
         var imagenJugador = findViewById<ImageView>(R.id.imagenJugador);
         var imagenPC = findViewById<ImageView>(R.id.imagenPC);
+        val botonJugar = findViewById<Button>(R.id.bJugar);
+        val opcionesPC = listOf(R.drawable.piedra, R.drawable.papel, R.drawable.tijeras)
 
-        botonPiedra.setOnClickListener {
-            imagenJugador.setImageResource(R.drawable.piedra);
+        imagenJugador.setImageResource(R.drawable.piedra);
+        imagenPC.setImageResource(R.drawable.piedra);
+
+            botonPiedra.setOnClickListener {
+                imagenJugador.setImageResource(R.drawable.piedra);
+                botonPiedra.isEnabled = false;
+                botonPiedra.isOpaque;
+
+                botonPapel.isEnabled = false;
+                botonPapel.isOpaque;
+
+                botonTijera.isEnabled = false;
+                botonTijera.isOpaque;
+
+            }
+
+            botonPapel.setOnClickListener {
+                imagenJugador.setImageResource(R.drawable.papel);
+                botonPapel.isEnabled = false;
+                botonPapel.isOpaque;
+
+                botonPiedra.isEnabled = false;
+                botonPiedra.isOpaque;
+
+                botonTijera.isEnabled = false;
+                botonTijera.isOpaque;
+
+            }
+
+            botonTijera.setOnClickListener {
+                imagenJugador.setImageResource(R.drawable.tijeras);
+                botonTijera.isEnabled = false;
+                botonTijera.isOpaque;
+
+                botonPiedra.isEnabled = false;
+                botonPiedra.isOpaque;
+
+                botonPapel.isEnabled = false;
+                botonPapel.isOpaque;
+            }
+
+        botonJugar.setOnClickListener {
+            var respuestaPC = opcionesPC.random();
+            var imagen = imagenPC.setImageResource(respuestaPC);
+
+            //EL JUGADOR GANA
+
+            if (imagen.equals(R.drawable.piedra) && imagenJugador.equals(R.drawable.papel)){
+                //El jugador ha ganado
+            }
+
+            if (imagen.equals(R.drawable.papel) && imagenJugador.equals(R.drawable.tijeras)){
+                //El jugador ha ganado
+            }
+
+            if (imagen.equals(R.drawable.tijeras) && imagenJugador.equals(R.drawable.piedra)){
+                //El jugador ha ganado
+            }
+
+            //EMPATE
+
+            //PIERDE
         }
-
-        botonPapel.setOnClickListener {
-            imagenJugador.setImageResource(R.drawable.papel);
-        }
-
-        botonTijera.setOnClickListener {
-            imagenJugador.setImageResource(R.drawable.tijeras);
-        }
-
     }
 }
