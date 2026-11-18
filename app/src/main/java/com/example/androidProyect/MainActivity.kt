@@ -39,7 +39,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.bConversor).setOnClickListener {
-
+            val intent = Intent(this, ConversorActivity::class.java)
+            startActivity(intent)
         }
 
         findViewById<Button>(R.id.bJuegos).setOnClickListener {

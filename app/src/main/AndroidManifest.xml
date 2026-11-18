@@ -41,6 +41,14 @@
             android:name=".EditarActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ConversorActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
