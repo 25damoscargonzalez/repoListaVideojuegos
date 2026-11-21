@@ -3,6 +3,7 @@ package com.example.androidProyect.Juegos
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -24,71 +25,79 @@ class JuegoActivity : AppCompatActivity() {
         val botonTijera = findViewById<Button>(R.id.bTijera);
         var imagenJugador = findViewById<ImageView>(R.id.imagenJugador);
         var imagenPC = findViewById<ImageView>(R.id.imagenPC);
-        val botonJugar = findViewById<Button>(R.id.bJugar);
         val opcionesPC = listOf(R.drawable.piedra, R.drawable.papel, R.drawable.tijeras)
+        val resultadoTxt = findViewById<TextView>(R.id.Resultado);
 
         imagenJugador.setImageResource(R.drawable.piedra);
         imagenPC.setImageResource(R.drawable.piedra);
 
             botonPiedra.setOnClickListener {
-                imagenJugador.setImageResource(R.drawable.piedra);
-                botonPiedra.isEnabled = false;
-                botonPiedra.isOpaque;
+                val eleccionJugador = R.drawable.piedra;
+                imagenJugador.setImageResource(eleccionJugador);
 
-                botonPapel.isEnabled = false;
-                botonPapel.isOpaque;
+                val eleccionPC = opcionesPC.random();
+                imagenPC.setImageResource(eleccionPC);
 
-                botonTijera.isEnabled = false;
-                botonTijera.isOpaque;
+                //Gana
+                if (eleccionJugador == R.drawable.piedra && eleccionPC == R.drawable.tijeras){
+                    resultadoTxt.setText("Ganaste")
+                }
 
+                //Empate
+                if (eleccionJugador == R.drawable.piedra && eleccionPC == R.drawable.piedra){
+                    resultadoTxt.setText("Empate")
+                }
+
+                //Pierde
+                if (eleccionJugador == R.drawable.piedra && eleccionPC == R.drawable.papel){
+                    resultadoTxt.setText("Perdiste")
+                }
             }
 
             botonPapel.setOnClickListener {
-                imagenJugador.setImageResource(R.drawable.papel);
-                botonPapel.isEnabled = false;
-                botonPapel.isOpaque;
+                val eleccionJugador = R.drawable.papel;
+                imagenJugador.setImageResource(eleccionJugador);
 
-                botonPiedra.isEnabled = false;
-                botonPiedra.isOpaque;
+                val eleccionPC = opcionesPC.random();
+                imagenPC.setImageResource(eleccionPC);
 
-                botonTijera.isEnabled = false;
-                botonTijera.isOpaque;
+                //Gana
+                if (eleccionJugador == R.drawable.papel && eleccionPC == R.drawable.piedra){
+                    resultadoTxt.setText("Ganaste")
+                }
 
+                //Empate
+                if (eleccionJugador == R.drawable.papel && eleccionPC == R.drawable.papel){
+                    resultadoTxt.setText("Empate")
+                }
+
+                //Pierde
+                if (eleccionJugador == R.drawable.papel && eleccionPC == R.drawable.tijeras){
+                    resultadoTxt.setText("Perdiste")
+                }
             }
 
             botonTijera.setOnClickListener {
-                imagenJugador.setImageResource(R.drawable.tijeras);
-                botonTijera.isEnabled = false;
-                botonTijera.isOpaque;
+                val eleccionJugador = R.drawable.tijeras;
+                imagenJugador.setImageResource(eleccionJugador);
 
-                botonPiedra.isEnabled = false;
-                botonPiedra.isOpaque;
+                val eleccionPC = opcionesPC.random();
+                imagenPC.setImageResource(eleccionPC);
 
-                botonPapel.isEnabled = false;
-                botonPapel.isOpaque;
+                //Gana
+                if (eleccionJugador == R.drawable.tijeras && eleccionPC == R.drawable.papel){
+                    resultadoTxt.setText("Ganaste")
+                }
+
+                //Empate
+                if (eleccionJugador == R.drawable.tijeras && eleccionPC == R.drawable.tijeras){
+                    resultadoTxt.setText("Empate")
+                }
+
+                //Pierde
+                if (eleccionJugador == R.drawable.tijeras && eleccionPC == R.drawable.piedra){
+                    resultadoTxt.setText("Perdiste")
+                }
             }
-
-        botonJugar.setOnClickListener {
-            var respuestaPC = opcionesPC.random();
-            var imagen = imagenPC.setImageResource(respuestaPC);
-
-            //EL JUGADOR GANA
-
-            if (imagen.equals(R.drawable.piedra) && imagenJugador.equals(R.drawable.papel)){
-                //El jugador ha ganado
-            }
-
-            if (imagen.equals(R.drawable.papel) && imagenJugador.equals(R.drawable.tijeras)){
-                //El jugador ha ganado
-            }
-
-            if (imagen.equals(R.drawable.tijeras) && imagenJugador.equals(R.drawable.piedra)){
-                //El jugador ha ganado
-            }
-
-            //EMPATE
-
-            //PIERDE
-        }
     }
 }
