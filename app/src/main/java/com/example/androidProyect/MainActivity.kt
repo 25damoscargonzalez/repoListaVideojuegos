@@ -12,8 +12,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.androidProyect.Juegos.JuegoActivity
 import com.example.androidProyect.datos.ListaConsolas
-import com.example.androidProyect.R
-import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
 
