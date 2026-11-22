@@ -9,7 +9,7 @@ import android.widget.Spinner
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.androidProyect.conversor.ConversorKt
-import java.util.Locale
+import com.example.androidProyect.conversor.Divisa // NUEVO import
 
 class ConversorActivity : AppCompatActivity() {
 
@@ -32,7 +32,7 @@ class ConversorActivity : AppCompatActivity() {
         val adaptador = ArrayAdapter(
             this,
             android.R.layout.simple_spinner_dropdown_item,
-            conversor.divisas
+            Divisa.values()
         )
         spOrigen.adapter = adaptador
         spDestino.adapter = adaptador
@@ -45,17 +45,18 @@ class ConversorActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            val origen = spOrigen.selectedItem.toString()
-            val destino = spDestino.selectedItem.toString()
+            val origen = spOrigen.selectedItem as Divisa
+            val destino = spDestino.selectedItem as Divisa
 
             val resultado = conversor.convertir(cantidad, origen, destino)
             val tasa = conversor.convertir(1.0, origen, destino)
 
             txtResultado.text = "%.2f".format(resultado)
 
-            txtResultadoFinal.text = "%.2f $origen = %.2f $destino".format(cantidad, resultado)
+            // CAMBIO: .name da "EUR", "USD", "ARS" (sin el texto largo)
+            txtResultadoFinal.text = "%.2f ${origen.name} = %.2f ${destino.name}".format(cantidad, resultado)
 
-            txtTasa.text = "1 $origen = %.4f $destino".format(tasa)
+            txtTasa.text = "1 ${origen.name} = %.4f ${destino.name}".format(tasa)
 
             cardResultado.visibility = View.VISIBLE
         }
