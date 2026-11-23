@@ -25,8 +25,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="120dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
         android:orientation="vertical">
 
         <TextView
@@ -40,26 +38,26 @@
 
         <ImageView
             android:id="@+id/imagenPC"
-            android:layout_width="400px"
-            android:layout_height="400px"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
             android:id="@+id/Resultado"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
+            android:layout_width="141dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:textAlignment="center"
             android:textSize="34sp"
             android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/imagenJugador"
-            android:layout_width="400px"
-            android:layout_height="400px"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             tools:srcCompat="@tools:sample/avatars" />
@@ -75,33 +73,30 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/bPiedra"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
+            android:layout_weight="1"
             android:text="Piedra" />
 
         <Button
             android:id="@+id/bPapel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
+            android:layout_weight="1"
             android:text="Papel" />
 
         <Button
             android:id="@+id/bTijera"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
+            android:layout_weight="1"
             android:text="Tijera" />
     </LinearLayout>
 
