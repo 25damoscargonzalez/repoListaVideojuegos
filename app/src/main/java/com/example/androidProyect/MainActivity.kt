@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.text.InputType
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -31,7 +32,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        findViewById<Button>(R.id.bCalculadora).setOnClickListener {
+        findViewById<ImageButton>(R.id.bCalculadora).setOnClickListener {
             val intent = Intent(this, CalculadoraActivity::class.java)
             startActivity(intent)
         }
