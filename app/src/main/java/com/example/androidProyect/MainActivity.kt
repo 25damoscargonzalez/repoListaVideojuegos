@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.text.InputType
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -31,27 +32,27 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        findViewById<Button>(R.id.bCalculadora).setOnClickListener {
+        findViewById<ImageButton>(R.id.bCalculadora).setOnClickListener {
             val intent = Intent(this, CalculadoraActivity::class.java)
             startActivity(intent)
         }
 
-        findViewById<Button>(R.id.bConversor).setOnClickListener {
+        findViewById<ImageButton>(R.id.bConversor).setOnClickListener {
             val intent = Intent(this, ConversorActivity::class.java)
             startActivity(intent)
         }
 
-        findViewById<Button>(R.id.bJuegos).setOnClickListener {
+        findViewById<ImageButton>(R.id.bJuegos).setOnClickListener {
             val intent = Intent(this, JuegoActivity::class.java)
             startActivity(intent)
         }
 
-        findViewById<Button>(R.id.bLista).setOnClickListener {
+        findViewById<ImageButton>(R.id.bLista).setOnClickListener {
             val intent = Intent(this, ListaActivity::class.java)
             startActivity(intent)
         }
 
-        findViewById<Button>(R.id.bIrConsola).setOnClickListener {
+        findViewById<ImageButton>(R.id.bIrConsola).setOnClickListener {
             dialogoElegir()
         }
 

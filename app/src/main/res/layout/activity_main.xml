@@ -1,61 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/bIrConsola"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ir a la consola"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bLista" />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/bLista"
-        android:layout_width="0dp"
+        <ImageButton
+            android:id="@+id/bCalculadora"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/calculadora" />
+
+        <ImageButton
+            android:id="@+id/bConversor"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/conversor" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Lista"
-        app:layout_constraintBottom_toTopOf="@+id/bIrConsola"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bJuegos" />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/bCalculadora"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Calculadora"
-        app:layout_constraintBottom_toTopOf="@+id/bConversor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageButton
+            android:id="@+id/bJuegos"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/juegos" />
 
-    <Button
-        android:id="@+id/bConversor"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Conversor"
-        app:layout_constraintBottom_toTopOf="@+id/bJuegos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bCalculadora" />
+        <ImageButton
+            android:id="@+id/bLista"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/lista" />
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/bJuegos"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Juegos"
-        app:layout_constraintBottom_toTopOf="@+id/bLista"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bConversor" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageButton
+            android:id="@+id/bIrConsola"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/consola" />
+    </LinearLayout>
+
+</LinearLayout>
