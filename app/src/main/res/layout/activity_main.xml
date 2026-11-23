@@ -8,41 +8,58 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/bIrConsola"
-        android:layout_width="411dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ir a la consola" />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/bLista"
-        android:layout_width="411dp"
+        <ImageButton
+            android:id="@+id/bCalculadora"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/calculadora" />
+
+        <ImageButton
+            android:id="@+id/bConversor"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/conversor" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Lista" />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/bCalculadora2"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:text="Calculadora" />
+        <ImageButton
+            android:id="@+id/bJuegos"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/juegos" />
 
-    <ImageButton
-        android:id="@+id/bCalculadora"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:scaleType="fitCenter"
-        app:srcCompat="@drawable/calculadora" />
+        <ImageButton
+            android:id="@+id/bLista"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/lista" />
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/bConversor"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:text="Conversor" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/bJuegos"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:text="Juegos" />
+        <ImageButton
+            android:id="@+id/bIrConsola"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/consola" />
+    </LinearLayout>
 
 </LinearLayout>

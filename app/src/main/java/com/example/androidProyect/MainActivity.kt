@@ -37,22 +37,22 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        findViewById<Button>(R.id.bConversor).setOnClickListener {
+        findViewById<ImageButton>(R.id.bConversor).setOnClickListener {
             val intent = Intent(this, ConversorActivity::class.java)
             startActivity(intent)
         }
 
-        findViewById<Button>(R.id.bJuegos).setOnClickListener {
+        findViewById<ImageButton>(R.id.bJuegos).setOnClickListener {
             val intent = Intent(this, JuegoActivity::class.java)
             startActivity(intent)
         }
 
-        findViewById<Button>(R.id.bLista).setOnClickListener {
+        findViewById<ImageButton>(R.id.bLista).setOnClickListener {
             val intent = Intent(this, ListaActivity::class.java)
             startActivity(intent)
         }
 
-        findViewById<Button>(R.id.bIrConsola).setOnClickListener {
+        findViewById<ImageButton>(R.id.bIrConsola).setOnClickListener {
             dialogoElegir()
         }
 
