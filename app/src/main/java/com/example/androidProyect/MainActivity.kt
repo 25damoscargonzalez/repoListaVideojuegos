@@ -1,6 +1,7 @@
 package com.example.androidProyect
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.text.InputType
 import android.widget.Button
@@ -64,7 +65,7 @@ class MainActivity : AppCompatActivity() {
         entrada.inputType = InputType.TYPE_CLASS_NUMBER
         entrada.hint = "Número de consola"
 
-        AlertDialog.Builder(this) //AlertDialog tiene una subclase que te construye un dialogo de alerta
+        val dialogo = AlertDialog.Builder(this) //AlertDialog tiene una subclase que te construye un dialogo de alerta
             .setTitle("Elige un consola")
             .setTitle("Introduce un número para elegir la consola")
             .setView(entrada) //Todos los elementos se llaman "View"
@@ -77,6 +78,10 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }
             .show()
+
+        dialogo.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(Color.parseColor("#D04141"))
+        dialogo.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(Color.parseColor("#D04141"))
+
     }
 
 }
