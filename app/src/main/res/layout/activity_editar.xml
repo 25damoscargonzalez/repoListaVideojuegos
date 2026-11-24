@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D4D5D6"
     android:orientation="vertical"
     tools:context=".EditarActivity">
 
@@ -140,5 +141,6 @@
         android:id="@+id/bGuardar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="#D04141"
         android:text="Guardar" />
 </LinearLayout>
