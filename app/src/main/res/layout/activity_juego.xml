@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="10dp"
+    android:background="#CC2E2E"
     android:orientation="vertical"
     tools:context=".Juegos.JuegoActivity">
 
@@ -14,25 +15,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
-        android:background="#8EB2D7"
+        android:background="#000000"
         android:text="Piedra, Papel o Tijera"
         android:textAlignment="center"
-        android:textColor="#050505"
+        android:textColor="#FFFDFD"
+        android:textColorLink="#FFFFFF"
         android:textSize="25dp"
         android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="120dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="130dp"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView13"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#FFFFFF"
             android:text="Ordenador"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -40,8 +41,8 @@
 
         <ImageView
             android:id="@+id/imagenPC"
-            android:layout_width="400px"
-            android:layout_height="400px"
+            android:layout_width="200px"
+            android:layout_height="200px"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             tools:srcCompat="@tools:sample/avatars" />
@@ -53,13 +54,14 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             android:textAlignment="center"
-            android:textSize="34sp"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/imagenJugador"
-            android:layout_width="400px"
-            android:layout_height="400px"
+            android:layout_width="200px"
+            android:layout_height="200px"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             tools:srcCompat="@tools:sample/avatars" />
@@ -68,6 +70,7 @@
             android:id="@+id/textView14"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#FFFFFF"
             android:text="Jugador"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -84,24 +87,26 @@
             android:id="@+id/bPiedra"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:text="Piedra" />
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:text="Piedra"
+            android:textColor="#FFFFFF"
+            android:textColorLink="#FFFFFF" />
 
         <Button
             android:id="@+id/bPapel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:text="Papel" />
 
         <Button
             android:id="@+id/bTijera"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:text="Tijera" />
     </LinearLayout>
 
