@@ -5,6 +5,8 @@
     android:id="@+id/base_tarjeta"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@drawable/borderojo"
     android:orientation="horizontal">
 
     <ImageView
